@@ -7,13 +7,18 @@
     tools:context=".Login"
     android:background="@drawable/gradient">
 
-    <ImageView
+    <ImageView android:id="@+id/girl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/girl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.9"
+        android:background="@drawable/gradient">
+</View>
 
     <ImageView
         android:id="@+id/logo"
@@ -80,6 +85,7 @@
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/boton1"
+        style="@style/buttonoutlined"
         ></Button>
 
 
