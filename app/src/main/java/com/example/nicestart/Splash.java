@@ -11,6 +11,9 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Handler;
+import android.view.ActionMode;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 public class Splash extends AppCompatActivity {
@@ -23,13 +26,15 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.splash);
 openApp();
 
-
+        ImageView log = findViewById(R.id.logo);
+        Animation rotate = AnimationUtils.loadAnimation(this, R.anim.rotate);
+        log.startAnimation(rotate);
 
         ImageView mSea = findViewById(R.id.backView);
 
         Glide.with(this)
                 .load("https://images.unsplash.com/photo-1565214975484-3cfa9e56f914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1482&q=80")
-//                .load(R.drawable.girl)
+             //   .load(R.drawable.girl)
                 .transition(DrawableTransitionOptions.withCrossFade(100))
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
