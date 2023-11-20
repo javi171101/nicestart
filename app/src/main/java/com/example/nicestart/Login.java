@@ -25,15 +25,14 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
-        //implements and starts animation
-        // objeto thunder sobre el cual aplicaremos la animación
+
         ImageView logo = findViewById(R.id.logo);
 
 
 
 
 
-//    Glide for loading girls
+
         ImageView mGirl = findViewById(R.id.girl);
         ImageView mLogo = findViewById(R.id.logo);
 
