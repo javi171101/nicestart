@@ -8,3 +8,5 @@
 ## Cree un splash para sustituir a la animación inicial default de Android.
 ![Login_activity](app/img/nopeople.PNG)
 ## tambien una pagia NoPeople que al recargarla, cambia la imagen que te muestra.
+
+## También hice un pull request al proyecto de Rodrigo Álvarez.
