@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Toast;
 
@@ -23,8 +24,11 @@ public class NoPeople extends AppCompatActivity {
 
 //La vista dentro es un webview con permiso para zoom
         miVisorWeb = (WebView) findViewById(R.id.vistaweb);
+        WebSettings webSettings = miVisorWeb.getSettings();
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(true);
         miVisorWeb.getSettings().setJavaScriptEnabled(true);
-        miVisorWeb.getSettings().setBuiltInZoomControls(true);
+        //miVisorWeb.getSettings().setBuiltInZoomControls(true);
         miVisorWeb.loadUrl("https://thispersondoesnotexist.com");
     }
     protected SwipeRefreshLayout.OnRefreshListener
